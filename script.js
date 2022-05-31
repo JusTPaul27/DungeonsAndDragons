@@ -7,7 +7,15 @@ fetch(BASE_URL)
 
 
 const classesTemplate = 
-`<span>#NAME</span>`
+`    <div class="card" style="width: 18rem;">
+<img src="#FOTO" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">#NAME</h5>
+  <p class="card-text">#ROLE</p>
+  <a href="#URLDIRIFERIMENTO" class="btn btn-primary">Learn more</a>
+</div>
+</div>
+`
 
 function initclasses(classessObj) {
     const array = classessObj.results;
@@ -15,16 +23,29 @@ function initclasses(classessObj) {
     displayclasses(classesArray)
 }
 
-function displayclassess(classes) {
+// function displayclasses(classes) {
 
-    const classesSContainer = document.getElementById('classes-container');
-    classesSContainer.innerHTML = '';
-    for (const classes of classes) {
+//     const classesSContainer = document.getElementById('classes-container');
+//     classesContainer.innerHTML = '';
+//     for (const classes of classeses) {
         
-        const classesCard = document.createElement('div');
-        classesCard.classList.add('classes-card');
-        const cardHtml = classesTemplate.replace('#NAME', classes.name);
-        classesCard.innerHTML = cardHtml;
-        classesSContainer.appendChild(classesCard);
+//         const classesCard = document.getElementsByClassName('card');
+//         classesCard.classList.add('classes-card');
+//         const cardHtml = classesTemplate.replace('#NAME', classes.name).replace('#ROLE', 'Ruolo: ')
+//         classesCard.innerHTML = cardHtml;
+//         classesContainer.appendChild(classesCard);
+//     }
+// }
+
+
+function displayclasses(classe) {
+    
+    const classesContainer = document.getElementById('classes-container');
+    classesContainer.innerHTML = '';
+
+    for (const classe of classes) {
+
+        
+        
     }
 }

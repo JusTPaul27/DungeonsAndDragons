@@ -1,4 +1,4 @@
-class Monster {
+class Classes {
 
     constructor(name, url){
         this.name = name;
@@ -6,9 +6,9 @@ class Monster {
     }
 
     static fromDbObj(obj){
-        const monster = new Monster(obj.name, obj.url);
+        const classes = new Classes(obj.name, obj.url);
         // monster.index = obj.index;
-        return monster;
+        return classes;
     }
 
 }
