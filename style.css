@@ -44,7 +44,6 @@ body {
 
 .classes-container {
     display: grid;
-    grid-template-columns: 1fr ;
     margin-left: 100px;
     margin-right: 100px;
 
@@ -57,5 +56,5 @@ body {
 }
 
 .card-img-top {
-    
+
 }
