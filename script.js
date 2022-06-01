@@ -3,49 +3,42 @@ let classesArray = [];
 
 fetch(BASE_URL)
 .then(response => response.json())
-.then(result => initclasses(result));
+.then(result => initClasses(result));
 
 
 const classesTemplate = 
-`    <div class="card" style="width: 18rem;">
+`
 <img src="#FOTO" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">#NAME</h5>
   <p class="card-text">#ROLE</p>
   <a href="#URLDIRIFERIMENTO" class="btn btn-primary">Learn more</a>
 </div>
-</div>
 `
-
-function initclasses(classessObj) {
-    const array = classessObj.results;
-    classesArray = array.map(o => classes.fromDbObj(o))
-    displayclasses(classesArray)
+function initClasses(classesObj) {
+  const array = classesObj.results;
+  classesArray = array.map(o => Class.fromDbObj(o));
+  displayClasses(classesArray);
 }
 
-// function displayclasses(classes) {
+function displayClasses(classes) {
+  const classesContainer = document.getElementById('classes-container');
+  classesContainer.innerHTML = '';
 
-//     const classesSContainer = document.getElementById('classes-container');
-//     classesContainer.innerHTML = '';
-//     for (const classes of classeses) {
-        
-//         const classesCard = document.getElementsByClassName('card');
-//         classesCard.classList.add('classes-card');
-//         const cardHtml = classesTemplate.replace('#NAME', classes.name).replace('#ROLE', 'Ruolo: ')
-//         classesCard.innerHTML = cardHtml;
-//         classesContainer.appendChild(classesCard);
-//     }
-// }
-
-
-function displayclasses(classe) {
+  for (const classe of classes) {
     
-    const classesContainer = document.getElementById('classes-container');
-    classesContainer.innerHTML = '';
+    const classCard = document.createElement('div');
+    classCard.classList.add('card');
+    const html = classesTemplate.replace('#FOTO', './assets/classes-image/' + classe.name + '-photo.png')
+                                .replace('#NAME', classe.name)
+                                .replace('#URLDIRIFERIMENTO', classe.url);
 
-    for (const classe of classes) {
+    classCard.innerHTML = html;
+    classesContainer.appendChild(classCard);
 
-        
-        
-    }
+  }
 }
+
+
+
+
