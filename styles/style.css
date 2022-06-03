@@ -35,6 +35,9 @@ body {
     justify-content: space-between;
     border: 6px solid #EC2127;
     background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header-logo {
