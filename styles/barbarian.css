@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.container-img {
+
+    width: 75%;
+}
+
+
+
+.role-section {
+    margin-top: 16px;
+    font-size: 18px;
+}
