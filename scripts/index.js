@@ -1,3 +1,7 @@
+function redirectTo(name) {
+  window.location.href = '../pages/classes.html';
+}
+
 const BASE_URL = 'https://www.dnd5eapi.co/api/classes';
 
 let classesArray = [];
@@ -10,13 +14,11 @@ const classesTemplate =
     <span class="card-title">
       #NAME
     </span>
-    <a href="#URL">
-      <button class="btn btn-primary">
-          <span class="material-symbols-outlined">
-              Read_More
-          </span>
-      </button>
-    </a>
+    <button class="btn btn-primary" onclick="redirectTo('#NAME')">
+        <span class="material-symbols-outlined">
+            Read_More
+        </span>
+    </button>
   </div>
 `
 
@@ -27,9 +29,8 @@ function printClasses(classesArray) {
   for (const classes of classesArray) {
     const classesCard = document.createElement('div');
     classesCard.classList.add('card');
-    const html = classesTemplate.replace('#IMG', '../assets/classes-image/' + classes.name + '-photo.png')
-                                .replace('#NAME', classes.name)
-                                .replace('#URL', '../pages/classes/' + classes.name + '.html');
+    const html = classesTemplate.replaceAll('#IMG', '../assets/classes/' + classes.name + '.png')
+                                .replaceAll('#NAME', classes.name);
 
     classesCard.innerHTML = html;
     container.appendChild(classesCard);
