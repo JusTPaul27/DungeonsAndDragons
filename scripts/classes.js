@@ -1,4 +1,4 @@
-function takeUrlData() {
+function takeClassesName() {
     const url = window.location.href;
     const startingPoint = url.indexOf('=') + 1;
     const name = url.slice(startingPoint);
@@ -6,8 +6,10 @@ function takeUrlData() {
 }
 
 function initClasses(classesJSON) {
-    console.log(takeUrlData());
-    // let classes = JSON.parse(classesJSON);
+    const classesName = takeClassesName();
+    console.log(classesJSON);
+    console.log(classesName);
+    console.log(classesJSON.classes.classesName);
 }
 
 function init() {
