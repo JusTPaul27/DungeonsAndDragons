@@ -1,5 +1,7 @@
 function redirectTo(name) {
-  window.location.href = '../pages/classes.html';
+  let url = '/pages/classes.html';
+  if(name) url += '?name=' + name.toLowerCase();
+  window.location.href = url;
 }
 
 const BASE_URL = 'https://www.dnd5eapi.co/api/classes';
