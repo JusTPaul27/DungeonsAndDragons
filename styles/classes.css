@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: justify;
+}
+
+.container-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 116px;
+    text-transform: capitalize;
+}
+
+.container-img {
+    width: 75%;
+    height: 75%;
+    margin: 32px;
+    margin-left: 48px;
+}
+
+.section-title {
+    font-weight: bold;
+}
