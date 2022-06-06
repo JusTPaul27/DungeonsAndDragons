@@ -39,7 +39,7 @@ function initClasses(classesJSON) {
         if (Object.hasOwnProperty.call(classesJSON.classes, classes)) {
             const element = classesJSON.classes[classes];
             if (element.name === classesName)
-                printClasses(element.name, element.description, element.role);
+                printClasses(element.name, element.description, element.role, element.alignment);
         }
     }
 }
