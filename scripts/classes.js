@@ -10,6 +10,10 @@ const classesTemplate =
         <span class="section-title">Role:</span>
         #ROLE
     </span>  
+    <span class="alignment-section">
+        <span class="section-title">Alignment:</span>
+        #ROLE
+    </span>  
 `
 
 function takeClassesName() {
@@ -19,7 +23,7 @@ function takeClassesName() {
     return name;
 }
 
-function printClasses(name, description, role) {
+function printClasses(name, description, role, alignment) {
     const container = document.getElementById('container');
     container.innerHTML = '';
   
@@ -28,7 +32,8 @@ function printClasses(name, description, role) {
     const htmlTemplate = classesTemplate.replaceAll('#TITLE', name)
                                 .replaceAll('#IMG', '../assets/classes/' + name + '.png')
                                 .replaceAll('#DESCRIPTION', description)
-                                .replaceAll('#ROLE', role);
+                                .replaceAll('#ROLE', role)
+                                .replaceAll('#ALIGNMENT', alignment);
     containerContent.innerHTML = htmlTemplate;
     container.appendChild(containerContent);
 }
