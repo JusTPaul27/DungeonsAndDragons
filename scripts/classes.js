@@ -1,7 +1,7 @@
 const classesTemplate =
 `
-    <span class="container-title">#TITLE</span>
-    <img class="container-img" src="#IMG" alt="">
+    <span class="card-title">#TITLE</span>
+    <img class="card-img" src="#IMG" alt="">
     <span class="description-section">
         <span class="section-title">Description:</span> 
         #DESCRIPTION
