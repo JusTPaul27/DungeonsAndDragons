@@ -12,7 +12,7 @@ const classesTemplate =
     </span>  
     <span class="alignment-section">
         <span class="section-title">Alignment:</span>
-        #ROLE
+        #ALIGNMENT
     </span>  
 `
 
