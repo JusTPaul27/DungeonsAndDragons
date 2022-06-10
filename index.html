@@ -15,11 +15,18 @@
 <body>
     <header class="header">
         <img class="header-logo" src="../assets/header-logo.png" alt="">
-        <button class="btn btn-primary">
+        <div class="dropdown">
+          <button class="btn btn-primary">
             <span class="material-symbols-outlined">
-                Menu
+              Menu
             </span>
-        </button>
+          </button>
+          <div class="dropdown-content">
+            <a onclick="redirectTo('barbarian')">Barbarian</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div> 
     </header>
 
   <div class="slideshow-container">
