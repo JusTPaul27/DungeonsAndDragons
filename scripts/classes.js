@@ -16,6 +16,12 @@ const classesTemplate =
     </span>  
 `
 
+function redirectTo(name) {
+    let url = '/pages/classes.html';
+    if(name) url += '?name=' + name.toLowerCase();
+    window.location.href = url;
+  }
+
 function takeClassesName() {
     const url = window.location.href;
     const startingPoint = url.indexOf('=') + 1;
