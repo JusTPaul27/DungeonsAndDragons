@@ -25,6 +25,10 @@ function showSlides(n) {
   dots[slideIndex - 1].className += ' active';
 } 
 
+function goHome() {
+  window.location.href = '../index.html';
+}
+
 function redirectTo(name) {
   let url = '/pages/classes.html';
   if(name) url += '?name=' + name.toLowerCase();
