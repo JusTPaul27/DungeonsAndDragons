@@ -14,17 +14,21 @@
 
 <body>
   <header class="header">
-    <a href="../index.html">
+    <!-- In questo modo il logo riporta alla pagina index.html -->
+    <a onclick="goHome()">
       <img class="header-logo" src="../assets/header-logo.png" alt="">
     </a>
+    <!-- Dropdown Menu con lista delle varie classi da scegliere -->
     <div class="dropdown">
       <button class="btn btn-primary">
+        <!-- Import di una classica icona Google -->
         <span class="material-symbols-outlined">
           Menu
         </span>
       </button>
       <div class="dropdown-content">
-        <a href="../index.html">Home</a>
+        <a onclick="goHome()">Home</a>
+        <!-- Per chiarimenti fare riferimenti a redirectTo() -->
         <a onclick="redirectTo('barbarian')">Barbarian</a>
         <a onclick="redirectTo('bard')">Bard</a>
         <a onclick="redirectTo('cleric')">Cleric</a>
@@ -38,8 +42,8 @@
         <a onclick="redirectTo('warlock')">Warlock</a>
         <a onclick="redirectTo('wizard')">Wizard</a>
       </div>
-    </div>
-  </header>
+    </div> 
+</header>
   <div class="container" id="container">
 
   </div>
