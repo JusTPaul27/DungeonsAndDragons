@@ -16,6 +16,10 @@ const classesTemplate =
     </span>  
 `
 
+function goHome() {
+    window.location.href = '../index.html';
+  }
+
 function redirectTo(name) {
     let url = '/pages/classes.html';
     if(name) url += '?name=' + name.toLowerCase();

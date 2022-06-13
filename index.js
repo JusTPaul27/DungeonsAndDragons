@@ -1,39 +1,4 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName('mySlides');
-  let dots = document.getElementsByClassName('dot');
-  if (n > slides.length) 
-    slideIndex = 1;
-  if (n < 1) 
-      slideIndex = slides.length;
-  for (let i = 0; i < slides.length; i++)
-    slides[i].style.display = 'none';
-  for (let  j = 0; j < dots.length; j++) {
-    dots[j].className = dots[j].className.replace(' active', '');
-  }
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' active';
-} 
-
-function goHome() {
-  window.location.href = '../index.html';
-}
-
-function redirectTo(name) {
-  let url = '/pages/classes.html';
-  if(name) url += '?name=' + name.toLowerCase();
-  window.location.href = url;
-}
+// * Declararions
 
 const BASE_URL = 'https://www.dnd5eapi.co/api/classes';
 
@@ -54,6 +19,50 @@ const classesTemplate =
     </button>
   </div>
 `
+
+let slideIndex = 1; // si parte dalla prima slide
+
+// * Slideshow
+
+showSlides(slideIndex); // si chiama la funzione showSlides(slideNumber)
+
+function plusSlides(slideNumber) {
+  showSlides(slideIndex += slideNumber);
+}
+
+function currentSlide(slideNumber) {
+  showSlides(slideIndex = slideNumber);
+}
+
+function showSlides(slideNumber) {
+  let slides = document.getElementsByClassName('mySlides'); // si prendono tutte le slides
+  let dots = document.getElementsByClassName('dot'); //  si prendono tutti i dots
+
+  if (slideNumber > slides.length) slideIndex = 1; // si ritorna alla prima
+  if (slideNumber < 1) slideIndex = slides.length; // si assegna la lunghezza dell'array
+
+  for (let i = 0; i < slides.length; i++) 
+    slides[i].style.display = 'none'; // elimina rendendo l'effetto di tipo fade
+  for (let  j = 0; j < dots.length; j++)
+    dots[j].className = dots[j].className.replace(' active', ''); //  rendi attiva al momento giusto
+
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' active';
+} 
+
+// * Funzioni generiche
+
+function goHome() {
+  window.location.href = '../index.html';
+}
+
+function redirectTo(name) {
+  let url = '/pages/classes.html';
+  if(name) url += '?name=' + name.toLowerCase();
+  window.location.href = url;
+}
+
+// * Funzioni principali
 
 function printClasses(classesArray) {
   const container = document.getElementById('container');
@@ -83,4 +92,3 @@ function init() {
 }
 
 init();
-showSlides(slideIndex);
