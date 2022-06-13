@@ -1,6 +1,6 @@
-// * Declararions
+// * Globally Variables Declararions
 
-const BASE_URL = 'https://www.dnd5eapi.co/api/classes';
+const API_URL = 'https://www.dnd5eapi.co/api/classes';
 
 let classesArray = [];
 
@@ -18,7 +18,7 @@ const classesTemplate =
         </span>
     </button>
   </div>
-`
+`;
 
 let slideIndex = 1; // si parte dalla prima slide
 
@@ -86,7 +86,7 @@ function initClasses(classesJSON) {
 }
 
 function init() {
-  fetch(BASE_URL)
+  fetch(API_URL)
   .then(response => response.json())
   .then(result => initClasses(result));
 }
