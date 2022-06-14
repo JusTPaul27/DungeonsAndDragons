@@ -71,9 +71,10 @@ function printClasses(classesArray) {
   for (const classes of classesArray) {
     const classesCard = document.createElement('div');
     classesCard.classList.add('card');
-    const html = classesTemplate.replaceAll('#IMG', './assets/classes/' + classes.name + '.png')
+    const html = classesTemplate.replaceAll('#IMG', './assets/classes/' + classes.name.toLowerCase() + '.png')
                                 .replaceAll('#NAME', classes.name);
 
+    console.log(html)
     classesCard.innerHTML = html;
     container.appendChild(classesCard);
   }
