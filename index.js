@@ -57,7 +57,7 @@ function goHome() {
 }
 
 function redirectTo(name) {
-  let url = '/pages/classes.html';
+  let url = './pages/classes.html';
   if(name) url += '?name=' + name.toLowerCase();
   window.location.href = url;
 }
@@ -71,7 +71,7 @@ function printClasses(classesArray) {
   for (const classes of classesArray) {
     const classesCard = document.createElement('div');
     classesCard.classList.add('card');
-    const html = classesTemplate.replaceAll('#IMG', '../assets/classes/' + classes.name + '.png')
+    const html = classesTemplate.replaceAll('#IMG', './../assets/classes/' + classes.name + '.png')
                                 .replaceAll('#NAME', classes.name);
 
     classesCard.innerHTML = html;
