@@ -21,7 +21,7 @@ function goHome() {
 }
 
 function redirectTo(name) {
-    let url = './classes.html';
+    let url = './../pages/classes.html';
     if(name) url += '?name=' + name.toLowerCase();
     window.location.href = url;
 }
