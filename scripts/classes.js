@@ -17,7 +17,7 @@ const classesTemplate =
 `
 
 function goHome() {
-    window.location.href = '.3/index.html';
+    window.location.href = './../index.html';
 }
 
 function redirectTo(name) {
