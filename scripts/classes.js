@@ -16,6 +16,16 @@ const classesTemplate =
     </span>  
 `
 
+function goHome() {
+    window.location.href = './../index.html';
+}
+
+function redirectTo(name) {
+    let url = './../pages/classes.html';
+    if(name) url += '?name=' + name.toLowerCase();
+    window.location.href = url;
+}
+
 function takeClassesName() {
     const url = window.location.href;
     const startingPoint = url.indexOf('=') + 1;
@@ -50,7 +60,7 @@ function initClasses(classesJSON) {
 }
 
 function init() {
-    fetch('../classes.json')
+    fetch('../classes.json') // per altri dati non contenuti nella API
     .then(response => response.json())
     .then(result => initClasses(result));
 }

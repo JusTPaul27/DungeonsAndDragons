@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=MedievalSharp&display=swap');
 
 body {
-  background-color: #EC2127;
   background-image: url(./assets/pattern-paolo2.png);
+  background-size: 256px;
 }
 
 .container {
@@ -19,21 +19,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   
-}
-
-.container-title {
-  font-size: 56px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
-  font-family: "MedievalSharp";
-  background: rgb(2, 0, 36);
-  background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(218,165,32,1) 15%, rgba(255,215,0,1) 39%, rgba(230,227,216,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #000;
-
 }
 
 .card {
@@ -71,14 +56,13 @@ body {
 
 .slideshow-container {
   max-width: 1024px;
-  max-height: 579px;
+  max-height: 768px;
   position: relative;
   margin: auto;
-  margin-top: 116px;
-  background-color: rgba(255, 255, 255, 0.377);
+  margin-top: 148px;
+  background-color: transparent;
   border: 4px solid #000000;
-  border-radius: 4px;
-  /* border-top: none; */
+  border-radius: 16px;
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -86,6 +70,7 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  border-radius: 12px;
 }
 
 .prev,
@@ -120,7 +105,7 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: rgba(13, 12, 12, 0.386);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .numbertext {
@@ -135,11 +120,11 @@ body {
   cursor: pointer;
   height: 8px;
   width: 8px;
-  margin: 0 2px;
   background-color: #FFF;
   border-radius: 100%;
   display: inline-block;
   transition: background-color 0.5s ease;
+  margin-bottom: 4px;
 }
 
 .active,
@@ -161,51 +146,3 @@ body {
     opacity: 1
   }
 }
-
- /* Dropdown Button */
- .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #ec2128;
-  background-image: url(./assets/pattern-hoover.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #00000057;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropbtn {background-color: #3e8e41;}  */
